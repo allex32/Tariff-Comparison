@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TC.Services", "TC.Services\TC.Services.csproj", "{5D0CDA8B-F3BE-49E7-AC39-9036EA3A7818}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TC.Tests", "TC.Tests\TC.Tests.csproj", "{5E7A5E35-F0F5-44BB-8782-A99899A6F12A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TC.WebApi", "TC.WebApi\TC.WebApi.csproj", "{9B553515-A821-4004-8754-43A522BB91D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D0CDA8B-F3BE-49E7-AC39-9036EA3A7818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D0CDA8B-F3BE-49E7-AC39-9036EA3A7818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D0CDA8B-F3BE-49E7-AC39-9036EA3A7818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D0CDA8B-F3BE-49E7-AC39-9036EA3A7818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7A5E35-F0F5-44BB-8782-A99899A6F12A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7A5E35-F0F5-44BB-8782-A99899A6F12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7A5E35-F0F5-44BB-8782-A99899A6F12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7A5E35-F0F5-44BB-8782-A99899A6F12A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B553515-A821-4004-8754-43A522BB91D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B553515-A821-4004-8754-43A522BB91D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B553515-A821-4004-8754-43A522BB91D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B553515-A821-4004-8754-43A522BB91D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
