@@ -21,8 +21,18 @@ namespace TC.Services.Infrastructure
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<BasicElectricityTariff>()
-                .Property(e => e.ConsumptionCost)
-                .HasConversion<double>();
+                .Property(x => x.ConsumptionCost).HasConversion<double>();
+            modelBuilder.Entity<BasicElectricityTariff>()
+                .Property(x => x.MonthlyTariffCost).HasConversion<double>();
+            
+            
+            modelBuilder.Entity<PackagedElectricityTariff>()
+                .Property(x => x.AnnualTariffCost).HasConversion<double>();         
+            modelBuilder.Entity<PackagedElectricityTariff>()
+                .Property(x => x.AnnualTariffAmount).HasConversion<double>();          
+            modelBuilder.Entity<PackagedElectricityTariff>()
+                .Property(x => x.ExtraConsumptionCost).HasConversion<double>();
+                
         }
     }
 }
