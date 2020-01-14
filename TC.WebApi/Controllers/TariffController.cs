@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NJsonSchema.Annotations;
 using TC.Services.Models;
 using TC.Services.Services;
 using TC.WebApi.Models;
@@ -26,7 +27,7 @@ namespace TC.WebApi.Controllers
         /// <param name="consumption">kWh/year</param>
         [HttpGet]
         [Route("compare")]
-        public GetCalculatedTariffModel[] Compare(decimal consumption)
+        public GetCalculatedTariffModel[] Compare([NotNull] decimal consumption)
         {
             var calculatedTariffs = _tariffService.GetAllTariffs().Select(x => ToGetCalculatedTariffModel(x, consumption));
             
