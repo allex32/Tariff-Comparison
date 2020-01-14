@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 using TC.Services.Infrastructure;
 using TC.Services.Services;
 
@@ -23,8 +22,11 @@ namespace TC.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSwaggerGen(setup => setup.SwaggerDoc("v1", new OpenApiInfo { Title = "TC.WebApi", Version = "v1" }));
-            
+            services.AddSwaggerDocument(cfg => 
+            {
+                cfg.Title = "Tariff comparison API";
+            });
+
             services.AddDbContext<TariffDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("TariffComparisonContext")));
 
@@ -39,10 +41,9 @@ namespace TC.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            
-            app.UseSwaggerUI(setup => setup.SwaggerEndpoint("/swagger/v1/swagger.json", "Tariff comparison API V1"));
-            
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
