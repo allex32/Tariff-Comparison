@@ -9,6 +9,9 @@ namespace TC.WebApiInspector.Configuration
     [JsonObject("ApiEndpoint")]
     public class ApiEndpointConfiguration
     {
+        public ApiEndpointConfiguration()
+        {}
+
         [JsonProperty("BaseUrl")]
         public string BaseUrl { get; set; }
     }

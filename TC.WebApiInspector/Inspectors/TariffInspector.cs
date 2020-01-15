@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using TC.WebApiInspector.Client;
 using TC.WebApiInspector.Configuration;
 
@@ -7,18 +8,18 @@ namespace TC.WebApiInspector.Inspectors
 {
     public class TariffInspector : IInspector
     { 
-        private readonly TariffClient tariffClient;
-        private readonly ILogger<TariffInspector> logger;
+        private readonly TariffClient _tariffClient;
+        private readonly ILogger<TariffInspector> _logger;
 
-        public TariffInspector(ApiEndpointConfiguration configuration, ILogger<TariffInspector> logger)
+        public TariffInspector(IOptionsMonitor<ApiEndpointConfiguration> configuration, ILogger<TariffInspector> logger)
         {
-            this.logger = logger;
-            tariffClient = new TariffClient(configuration.BaseUrl);
+            _logger = logger;
+            _tariffClient = new TariffClient(configuration.CurrentValue.BaseUrl);
         }
 
         public void Inspect()
         {
-            logger.LogInformation("Started");
+            _logger.LogInformation("Started");
         }
     }
 }

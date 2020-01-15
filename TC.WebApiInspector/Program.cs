@@ -35,8 +35,10 @@ namespace TC.WebApiInspector
                 .AsImplementedInterfaces()
                 .WithScopedLifetime());
 
-            collection.Configure<ApiEndpointConfiguration>(GetConfigurationRoot().GetSection("application"));
-           
+            collection.Configure<ApiEndpointConfiguration>(GetConfigurationRoot()
+                .GetSection("application")
+                .GetSection("ApiEndpoint"));
+
             return collection.BuildServiceProvider();
         }
 
