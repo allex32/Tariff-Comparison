@@ -1,0 +1,1 @@
+.\prism-cli.exe mock swagger.json

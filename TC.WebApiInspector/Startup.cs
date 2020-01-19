@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using TC.WebApiInspector.Inspectors;
 
 namespace TC.WebApiInspector
@@ -13,12 +14,16 @@ namespace TC.WebApiInspector
         {
             this.inspectors = inspectors;
         }
-        public void Run()
+
+        public async Task Run()
         {
+            var inspectorTasks = new List<Task>();
             foreach(var inspector in inspectors)
             {
-                inspector.Inspect();
+                inspectorTasks.Add(inspector.Inspect());
             }
+
+            await Task.WhenAll(inspectorTasks);
         }
     }
 }

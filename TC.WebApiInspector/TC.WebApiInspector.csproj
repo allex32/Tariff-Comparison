@@ -38,8 +38,10 @@
   <Target Name="NSwag" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <OutputClientProxyPath>Client/ClientProxy.cs</OutputClientProxyPath>
+      <OutputOpenApiDocumentPath>Prism/swagger.json</OutputOpenApiDocumentPath>
     </PropertyGroup>
     <Message Text="NSwag client code generation is running.." Importance="high" />
+    <Message Text="NSwag OpenApi definition file generation is running.." Importance="high" />
     <Exec Command="$(NSwagExe_Core30) run SwaggerConfig.nswag /variables:output=$(OutputClientProxyPath) " />
     <ItemGroup>
       <Compile Remove="$(OutputClientProxyPath)" />

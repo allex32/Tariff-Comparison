@@ -4,3 +4,5 @@ obj/
 .vs/
 .git/
 .idea/
+/TC.WebApi/TariffComparison.db
+/TC.WebApiInspector/Prism/swagger.json

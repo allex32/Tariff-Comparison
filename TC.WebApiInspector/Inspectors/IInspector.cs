@@ -1,7 +1,9 @@
-﻿namespace TC.WebApiInspector.Inspectors
+﻿using System.Threading.Tasks;
+
+namespace TC.WebApiInspector.Inspectors
 {
     public interface IInspector
     {
-        void Inspect();
+        Task Inspect();
     }
 }
