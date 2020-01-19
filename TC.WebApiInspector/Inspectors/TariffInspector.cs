@@ -49,10 +49,7 @@ namespace TC.WebApiInspector.Inspectors
                 isAssertionConfirmed &= string.Equals("Basic electricity tariff", tariffs[0].TariffName);
                 isAssertionConfirmed &= tariffs[0].AnnualCosts == 82;
                 isAssertionConfirmed &= tariffs[0].AnnualConsumption == 100;
-                isAssertionConfirmed &= string.Equals("Packaged tariff", tariffs[1].TariffName);
-                isAssertionConfirmed &= tariffs[1].AnnualCosts == 800;
-                isAssertionConfirmed &= tariffs[1].AnnualConsumption == 100;
-
+              
                 if (isAssertionConfirmed)
                 {
                     resultMessage.AppendLine($"{currentMethodName} : Passed");

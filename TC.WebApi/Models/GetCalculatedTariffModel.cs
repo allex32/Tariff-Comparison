@@ -1,5 +1,12 @@
 namespace TC.WebApi.Models
 {
+    /// <example>
+    /// {
+    ///   "tariffName": "Basic electricity tariff",
+    ///   "annualCosts": 82,
+    ///   "annualConsumption": 100
+    /// }
+    /// </example>
     public class GetCalculatedTariffModel
     {
         /// <summary>

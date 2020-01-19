@@ -21,7 +21,7 @@
       "flattenInheritanceHierarchy": false,
       "generateKnownTypes": true,
       "generateEnumMappingDescription": false,
-      "generateXmlObjects": false,
+      "generateXmlObjects": true,
       "generateAbstractProperties": false,
       "generateAbstractSchemas": true,
       "ignoreObsoleteProperties": false,
