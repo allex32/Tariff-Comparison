@@ -15,6 +15,7 @@ Calculation model: base costs per month 5 € + consumption costs 22 cent/kWh Ex
 • Consumption = 3500 kWh/year => Annual costs = 830 €/year (5€ * 12 months = 60 € base  costs + 3500 kWh/year * 22 cent/kWh = 770 € consumption costs)  
 • Consumption = 4500 kWh/year => Annual costs = 1050 €/year (5€ * 12 months = 60 € base  costs + 4500 kWh/year * 22 cent/kWh = 990 € consumption costs)  
 • Consumption = 6000 kWh/year => Annual costs = 1380 €/year (5€ * 12 months = 60 € base  costs + 6000 kWh/year * 22 cent/kWh = 1320 € consumption costs)  
+
 2. Product B  
 Name: “Packaged tariff”  
 Calculation model: 800 € for up to 4000 kWh/year and above 4000 kWh/year additionally 30  cent/kWh.  
